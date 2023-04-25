@@ -20,6 +20,7 @@ public class PlayerWallJumpState : PlayerState
     {
         base.Update();
 
+        //Change stateTimer = 0 to < .1f because the player was looking to otherside when jump for a little sec and then look to correct side and thats was bothering me.
         if(stateTimer < .1f)
         {
             stateMachine.ChangeState(player.airState);

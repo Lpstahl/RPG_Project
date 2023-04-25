@@ -29,7 +29,7 @@ public class PlayerWallState : PlayerState
         }
 
         //CHANGE xInput == 0 to xInput != 0. Because was flicking the wall slide animation and this change works
-        if(xInput != 0 && player.facingDir == xInput)
+        if(xInput != 0 && player.facingDir != xInput)
         {                  
                 stateMachine.ChangeState(player.idleState);          
         }

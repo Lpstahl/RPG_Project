@@ -19,7 +19,7 @@ public class PlayerDashState : PlayerState
     {
         base.Update();
 
-        if (!player.IsGroundDetected() && player.isWallDetected() )
+        if (!player.IsGroundDetected() && player.isWallDetected())
         {
             stateMachine.ChangeState(player.wallSlide);
         }
