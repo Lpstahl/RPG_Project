@@ -54,7 +54,7 @@ public class SkeletonBattleState : EnemyState
         }
         else if(player.position.x < enemy.transform.position.x) 
         { 
-            moveDir = -1; 
+            moveDir = -1;
         }
 
         enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
