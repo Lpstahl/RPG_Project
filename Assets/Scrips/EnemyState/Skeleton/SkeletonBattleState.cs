@@ -23,6 +23,7 @@ public class SkeletonBattleState : EnemyState
     public override void Update()
     {
         base.Update();
+
         #region Attack
         if (enemy.isPlayerDetected())
         {
