@@ -8,16 +8,16 @@ public class SkeletonBattleState : EnemyState
     private EnemySkeleton enemy;
     private int moveDir;
 
-    public SkeletonBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, EnemySkeleton enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    public SkeletonBattleState(Enemy _enemyBase, EnemyStateMachine _stateMachine, string _animBoolName, EnemySkeleton _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-        this.enemy = enemy;
+        this.enemy = _enemy;
     }
 
     public override void Enter()
     {
         base.Enter();
 
-        player = GameObject.Find("Player").transform;
+        player = PlayerManager.instance.player.transform;
     }
 
     public override void Update()

@@ -18,6 +18,11 @@ public class PlayerGroundState : PlayerState
     {
         base.Update();
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            stateMachine.ChangeState(player.counterAttack);
+        }
+
         if ( Input.GetKeyDown(KeyCode.Mouse0))
         {
             stateMachine.ChangeState(player.primaryAttack);

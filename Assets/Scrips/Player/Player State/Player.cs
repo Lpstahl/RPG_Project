@@ -7,6 +7,7 @@ public class Player : Entity
 {
     [Header("Attack Details")]
     public Vector2[] attackMovement;
+    public float counterAttackDuration = .2f;
 
     public bool isBusy {  get; private set; }
     [Header("Move Info")]
@@ -31,8 +32,7 @@ public class Player : Entity
     public PlayerWallJumpState wallJump { get; private set; }
 
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
-    
-    
+    public PlayerCounterAttackState counterAttack { get; private set; }  
     #endregion
 
     protected override void Awake()
@@ -50,6 +50,7 @@ public class Player : Entity
         wallJump = new PlayerWallJumpState(this, stateMachine, "Jump");
 
         primaryAttack = new PlayerPrimaryAttackState(this, stateMachine, "Attack");
+        counterAttack = new PlayerCounterAttackState(this, stateMachine, "CounterAttack");
     }
 
     protected override void Start()
@@ -87,11 +88,8 @@ public class Player : Entity
             return;
         }
 
-        dashUsageTime -= Time.deltaTime;
-
-        if(Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTime < 0) 
+        if(Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.instance.dash.CanUseSkill()) 
         {
-            dashUsageTime = dashCoolDown;
             dashDirection = Input.GetAxisRaw("Horizontal");
 
             if(dashDirection == 0)
