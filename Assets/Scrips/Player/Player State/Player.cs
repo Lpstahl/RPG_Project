@@ -22,6 +22,7 @@ public class Player : Entity
     public float dashDirection { get; private set; }
 
     public SkillManager skill { get; private set; }
+    public GameObject sword; // { get; private set; }
 
     #region State
     public PlayerStateMachine stateMachine {  get; private set; }
@@ -77,6 +78,16 @@ public class Player : Entity
 
         Debug.Log(isWallDetected());
         CheckForDashInput();
+    }
+
+    public void AssignNewSword(GameObject _newSword)
+    {
+        sword = _newSword;
+    }
+
+    public void CatchTheSword()
+    {
+        Destroy(sword);
     }
 
     public IEnumerator BusyFor(float _seconds)
