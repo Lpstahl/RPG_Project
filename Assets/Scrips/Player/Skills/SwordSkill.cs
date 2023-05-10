@@ -63,6 +63,7 @@ public class SwordSkill : Skill
         return direction;
     }
 
+
     public void DotsActive(bool _isActive)
     {
         for (int i = 0; i < dots.Length; i++)
