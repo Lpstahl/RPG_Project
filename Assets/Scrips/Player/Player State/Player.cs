@@ -10,9 +10,11 @@ public class Player : Entity
     public float counterAttackDuration = .2f;
 
     public bool isBusy {  get; private set; }
+
     [Header("Move Info")]
     public float moveSpeed = 12f;
     public float jumpForce;
+    public float swordReturnImpact;
 
     [Header("Dash Info")]
     [SerializeField] private float dashCoolDown;
@@ -22,7 +24,7 @@ public class Player : Entity
     public float dashDirection { get; private set; }
 
     public SkillManager skill { get; private set; }
-    public GameObject sword; // { get; private set; }
+    public GameObject sword { get; private set; }
 
     #region State
     public PlayerStateMachine stateMachine {  get; private set; }
@@ -37,7 +39,7 @@ public class Player : Entity
     public PlayerPrimaryAttackState primaryAttack { get; private set; }
     public PlayerCounterAttackState counterAttack { get; private set; } 
     public PlayerAimSwordState aimSwordState { get; private set; }
-    public PlayerCatchSwordState catchSwordState { get; private set; }
+    public PlayerCatchSwordState catchSword { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -58,7 +60,7 @@ public class Player : Entity
         counterAttack = new PlayerCounterAttackState(this, stateMachine, "CounterAttack");
 
         aimSwordState = new PlayerAimSwordState(this, stateMachine, "AimSword");
-        catchSwordState = new PlayerCatchSwordState(this, stateMachine, "CatchSword");
+        catchSword = new PlayerCatchSwordState(this, stateMachine, "CatchSword");
     }
 
     protected override void Start()
@@ -76,7 +78,6 @@ public class Player : Entity
 
         stateMachine.currentState.Update();
 
-        Debug.Log(isWallDetected());
         CheckForDashInput();
     }
 
@@ -85,8 +86,9 @@ public class Player : Entity
         sword = _newSword;
     }
 
-    public void CatchTheSword()
+    public void CatachTheSword()
     {
+        stateMachine.ChangeState(catchSword);
         Destroy(sword);
     }
 

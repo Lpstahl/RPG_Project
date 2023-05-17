@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7285743505967793240}
   - component: {fileID: 5619302404232800353}
+  - component: {fileID: 7438711845530601968}
   m_Layer: 0
   m_Name: SwordAnimation
   m_TagString: Untagged
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &7438711845530601968
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5620400686196267117}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9dfdbea2b1ef7d941b61863dae8eba1b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7778603389442994295
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +117,7 @@ GameObject:
   - component: {fileID: 7084403804545792524}
   - component: {fileID: 7657456930328730675}
   - component: {fileID: 3706841251483694274}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SwordSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +155,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.35
 --- !u!50 &7657456930328730675
 Rigidbody2D:
   serializedVersion: 4
@@ -168,4 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c922f776861dc7f4da3a57e46eb52259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  returnSpeed: 20
+  returnSpeed: 35
+  pierceAmount: 0
+  bounceSpeed: 20

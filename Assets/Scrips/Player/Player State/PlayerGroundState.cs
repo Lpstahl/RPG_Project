@@ -13,7 +13,6 @@ public class PlayerGroundState : PlayerState
         base.Enter();
     }
 
-
     public override void Update()
     {
         base.Update();
