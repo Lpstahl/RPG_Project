@@ -30,8 +30,7 @@ Transform:
   m_LocalPosition: {x: -22.828104, y: 4.4846616, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1808435385555059893}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -115,52 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881ad9b43c7602147a28231c9f02fe9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotKeyPrefab: {fileID: 8004499959407267083}
+  hotKeyPrefab: {fileID: 1481267040010584354, guid: 96d699f6ff08fcb49ab247850ff970b4, type: 3}
   keyCodeList: 7100000077000000650000006600000074000000
   maxSize: 15
   growSpeed: 1
   shrinkSpeed: 3
---- !u!1 &8004499959407267083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1808435385555059893}
-  - component: {fileID: 7697174094846923550}
-  m_Layer: 0
-  m_Name: BlackHoleHotKey
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1808435385555059893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004499959407267083}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1888404920858725933}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7697174094846923550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004499959407267083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e8384d8d0d09364d83850e81f09c657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
