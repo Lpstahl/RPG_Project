@@ -22,6 +22,7 @@ public class BlackHoleSkillController : MonoBehaviour
     private int amountOfAttacks = 4;
     private float cloneattackCooldown = .3f;
     private float cloneAttackTimer;
+    private float radiusClonesAttack = .5f;
 
     private List<Transform> targets = new List<Transform>();
     private List<GameObject> createHotKey = new List<GameObject>();
@@ -112,11 +113,11 @@ public class BlackHoleSkillController : MonoBehaviour
 
             if (UnityEngine.Random.Range(0, 100) > 50)
             {
-                xOffset = 2;
+                xOffset = radiusClonesAttack;
             }
             else
             {
-                xOffset = -2;
+                xOffset = -radiusClonesAttack;
             }
 
             SkillManager.instance.clone.CreateClone(targets[randomIndex], new Vector3(xOffset, 0));
