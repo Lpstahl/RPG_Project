@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class BlackHoleSkillController : MonoBehaviour
@@ -10,11 +11,13 @@ public class BlackHoleSkillController : MonoBehaviour
     public float maxSize;
     public float growSpeed;
     public float shrinkSpeed;
+    private float blackholeTimer;
 
     private bool canGrow = true;
     private bool canShrink;
     private bool canCreateHotKeys = true;
     private bool cloneAttackReleased;
+    private bool playerCanDesapair = true;
 
     private int amountOfAttacks = 4;
     private float cloneattackCooldown = .3f;
@@ -23,19 +26,37 @@ public class BlackHoleSkillController : MonoBehaviour
     private List<Transform> targets = new List<Transform>();
     private List<GameObject> createHotKey = new List<GameObject>();
 
-    public void SetUpBlackHole(float _maxSize, float _growSpeed, float _shrinkSpeed, int _amountOfAttacks, float _cloneAttackCooldown)
+    public bool playerCanExitState {  get; private set; }
+
+    public void SetUpBlackHole(float _maxSize, float _growSpeed, float _shrinkSpeed, int _amountOfAttacks, float _cloneAttackCooldown, float _blackholeDuration)
     {
         maxSize = _maxSize;
         growSpeed = _growSpeed;
         shrinkSpeed = _shrinkSpeed;
         amountOfAttacks = _amountOfAttacks;
         cloneattackCooldown = _cloneAttackCooldown;
+        blackholeTimer = _blackholeDuration;
 
     }
 
     private void Update()
     {
         cloneAttackTimer -= Time.deltaTime;
+        blackholeTimer -= Time.deltaTime;
+
+        if (blackholeTimer < 0)
+        {
+            blackholeTimer = Mathf.Infinity;
+
+            if (targets.Count > 0)
+            {
+                ReleaseCloneAttack();
+            }
+            else
+            {
+                FinishBlackholeAbillity();
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -63,22 +84,33 @@ public class BlackHoleSkillController : MonoBehaviour
 
     private void ReleaseCloneAttack()
     {
+        if (targets.Count <= 0)
+        {
+            return;
+        }
+
         DestroyHotKeys();
         cloneAttackReleased = true;
         canCreateHotKeys = false;
+
+        if (playerCanDesapair)
+        {
+            playerCanDesapair = false;
+            PlayerManager.instance.player.MakeTransparent(true);
+        }
     }
 
     private void CloneAttackLogic()
     {
-        if (cloneAttackTimer < 0 && cloneAttackReleased)
+        if (cloneAttackTimer < 0 && cloneAttackReleased && amountOfAttacks > 0)
         {
             cloneAttackTimer = cloneattackCooldown;
 
-            int randomIndex = Random.Range(0, targets.Count);
+            int randomIndex = UnityEngine.Random.Range(0, targets.Count);
 
             float xOffset;
 
-            if (Random.Range(0, 100) > 50)
+            if (UnityEngine.Random.Range(0, 100) > 50)
             {
                 xOffset = 2;
             }
@@ -92,10 +124,17 @@ public class BlackHoleSkillController : MonoBehaviour
 
             if (amountOfAttacks <= 0)
             {
-                canShrink = true;
-                cloneAttackReleased = false;
+                Invoke("FinishBlackholeAbillity", 1);
             }
         }
+    }
+
+    private void FinishBlackholeAbillity()
+    {
+        DestroyHotKeys();
+        playerCanExitState = true;
+        canShrink = true;
+        cloneAttackReleased = false;       
     }
 
     private void DestroyHotKeys()
@@ -144,7 +183,7 @@ public class BlackHoleSkillController : MonoBehaviour
         GameObject newHotKey = Instantiate(hotKeyPrefab, collision.transform.position + new Vector3(0, 2), Quaternion.identity);
         createHotKey.Add(newHotKey);
 
-        KeyCode choosenKey = keyCodeList[Random.Range(0, keyCodeList.Count)];
+        KeyCode choosenKey = keyCodeList[UnityEngine.Random.Range(0, keyCodeList.Count)];
         keyCodeList.Remove(choosenKey);
 
         BlackholeHotKeyController newHotKeyScript = newHotKey.GetComponent<BlackholeHotKeyController>();
