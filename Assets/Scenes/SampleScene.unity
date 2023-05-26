@@ -1007,7 +1007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813c35e652117234a887e309c85b2bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
 --- !u!114 &1004485202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,7 +1046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4f126f5504c114b968ac0a069ac762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
   clonePrefab: {fileID: 75389914165648699, guid: e33bbc0d8037daf489cb5b2489023b57, type: 3}
   cloneDuration: 1
   canAttack: 1
@@ -1063,7 +1061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 897311892b26cc6408674110b19c576c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
   swordType: 0
   bounceAmount: 4
   bounceGravity: 1
@@ -1095,7 +1092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdf47c6fb1c7a846a3a2f2ddad31175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
   amountOfAttacks: 5
   cloneCooldown: 0.35
   blackHolePref: {fileID: 1888404920858725936, guid: ba4cf6883d01b5c4b9215a6610c42e4d, type: 3}
@@ -1115,12 +1111,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7fa899c8257bc469fa61ec08cbb935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 0
   crystalDuration: 1.5
   crystalPrefab: {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
   canExplode: 1
   canMoveToEnemy: 1
   moveSpeed: 10
+  canUseMultiStacks: 1
+  amountOfStacks: 3
+  multiStackCooldown: 0
+  useTimeWindown: 0
+  crystalLeft:
+  - {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
+  - {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
+  - {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
 --- !u!1 &1006298279
 GameObject:
   m_ObjectHideFlags: 0
