@@ -30,6 +30,7 @@ public class PlayerCounterAttackState : PlayerState
                 {
                     stateTimer = 10; // any valu bigger than 1
                     player.anim.SetBool("SuccessfullCounterAttack", true);
+                    player.skill.clone.CreateCloneOnCounterAttack(hit.transform);
                 }
             }
         }

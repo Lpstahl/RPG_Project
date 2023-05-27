@@ -1047,8 +1047,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 75389914165648699, guid: e33bbc0d8037daf489cb5b2489023b57, type: 3}
-  cloneDuration: 1
+  cloneDuration: 3
   canAttack: 1
+  createCloneOnDashStart: 1
+  createCloneOnDashOver: 1
+  canCreateCloneOnCounterAttack: 0
 --- !u!114 &1004485205
 MonoBehaviour:
   m_ObjectHideFlags: 0
