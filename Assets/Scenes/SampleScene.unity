@@ -1051,7 +1051,11 @@ MonoBehaviour:
   canAttack: 1
   createCloneOnDashStart: 1
   createCloneOnDashOver: 1
-  canCreateCloneOnCounterAttack: 0
+  canCreateCloneOnCounterAttack: 1
+  canDuplacateClone: 1
+  canDuplicateClone: 1
+  chanceToDuplicate: 35
+  crystalInsteadOfClone: 1
 --- !u!114 &1004485205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1095,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdf47c6fb1c7a846a3a2f2ddad31175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountOfAttacks: 5
+  amountOfAttacks: 7
   cloneCooldown: 0.35
   blackHolePref: {fileID: 1888404920858725936, guid: ba4cf6883d01b5c4b9215a6610c42e4d, type: 3}
   blackholeDuration: 2.5
@@ -1116,13 +1120,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crystalDuration: 1.5
   crystalPrefab: {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
+  cloneInsteadeOfCrystal: 0
   canExplode: 1
   canMoveToEnemy: 1
   moveSpeed: 10
   canUseMultiStacks: 1
   amountOfStacks: 3
-  multiStackCooldown: 0
-  useTimeWindown: 0
+  multiStackCooldown: 4
+  useTimeWindown: 2.5
   crystalLeft:
   - {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
   - {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
