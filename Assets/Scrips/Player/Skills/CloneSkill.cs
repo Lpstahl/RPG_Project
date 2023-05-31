@@ -19,16 +19,14 @@ public class CloneSkill : Skill
     [SerializeField] private bool canDuplicateClone;
     [SerializeField] private float chanceToDuplicate;
     [Header("Crystal instead of clone")]
-    [SerializeField] private bool crystalInsteadOfClone;
+    public bool crystalInsteadOfClone;
 
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
         if (crystalInsteadOfClone)
         {
             SkillManager.instance.crystal.CreateCrystal();
-            {
-                return;
-            }
+            return;            
         }
 
         GameObject newClone = Instantiate(clonePrefab);

@@ -56,4 +56,9 @@ public class BlackHoleSkill : Skill
 
         return false;
     }
+
+    public float GetBlackholeRadios()
+    {
+        return maxSize / 2;
+    }
 }
