@@ -1053,11 +1053,10 @@ MonoBehaviour:
   canAttack: 1
   createCloneOnDashStart: 1
   createCloneOnDashOver: 1
-  canCreateCloneOnCounterAttack: 1
-  canDuplacateClone: 1
-  canDuplicateClone: 1
+  canCreateCloneOnCounterAttack: 0
+  canDuplicateClone: 0
   chanceToDuplicate: 35
-  crystalInsteadOfClone: 1
+  crystalInsteadOfClone: 0
 --- !u!114 &1004485205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,11 +1124,11 @@ MonoBehaviour:
   cooldown: 0
   crystalDuration: 1.5
   crystalPrefab: {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
-  cloneInsteadeOfCrystal: 0
+  cloneInsteadeOfCrystal: 1
   canExplode: 1
   canMoveToEnemy: 1
   moveSpeed: 10
-  canUseMultiStacks: 1
+  canUseMultiStacks: 0
   amountOfStacks: 3
   multiStackCooldown: 4
   useTimeWindown: 2.5
@@ -13078,6 +13077,10 @@ PrefabInstance:
     - target: {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
       propertyPath: m_Name
       value: Crystal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683809746891848743, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024f4631e490fce4ea5de4ee2a866647, type: 3}
