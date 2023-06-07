@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 
 public class EnemySkeleton : Enemy
@@ -10,6 +11,7 @@ public class EnemySkeleton : Enemy
     public SkeletonBattleState battleState { get; private set; }
     public SkeletonAttackState attackState { get; private set; }
     public SkeletonStunedState stunnedState { get; private set; }
+    public SkeletonDeadState olavoDeadState { get; private set; }
     #endregion
 
     protected override void Awake()
@@ -21,6 +23,7 @@ public class EnemySkeleton : Enemy
         battleState = new SkeletonBattleState(this, stateMachine, "Move", this);
         attackState = new SkeletonAttackState(this, stateMachine, "Attack", this);
         stunnedState = new SkeletonStunedState(this, stateMachine, "Stunned", this);
+        olavoDeadState = new SkeletonDeadState(this, stateMachine, "Die");
 
     }
 
@@ -49,5 +52,13 @@ public class EnemySkeleton : Enemy
             return true;
         }
         return false;
+    }
+
+    public override void Die()
+    {
+        base.Die();
+
+        stateMachine.ChangeState(olavoDeadState);
+        counterImage.SetActive(false);
     }
 }
