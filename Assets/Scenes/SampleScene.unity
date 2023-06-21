@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 155879326}
   - component: {fileID: 155879327}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: HealthBar_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,6 +1696,7 @@ MonoBehaviour:
   isShocked: 0
   shockStrikePrefab: {fileID: 1159879777838879102, guid: f8580bf3ff2b20444bfd3818266e0c3b, type: 3}
   currentHealth: 0
+  deadDelay: 2
 --- !u!114 &777262980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2431,7 @@ GameObject:
   - component: {fileID: 1181146312}
   - component: {fileID: 1181146313}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Health_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6561,7 +6562,7 @@ MonoBehaviour:
     baseValue: 1
     modifiers: 
   fireDamage:
-    baseValue: 0
+    baseValue: 50
     modifiers: 
   iceDamage:
     baseValue: 0
@@ -6771,6 +6772,7 @@ MonoBehaviour:
   isShocked: 0
   shockStrikePrefab: {fileID: 1159879777838879102, guid: f8580bf3ff2b20444bfd3818266e0c3b, type: 3}
   currentHealth: 0
+  deadDelay: 2
 --- !u!114 &1669060076
 MonoBehaviour:
   m_ObjectHideFlags: 0

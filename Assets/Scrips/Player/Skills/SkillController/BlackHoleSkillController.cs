@@ -102,7 +102,7 @@ public class BlackHoleSkillController : MonoBehaviour
         if (playerCanDesapair)
         {
             playerCanDesapair = false;
-            PlayerManager.instance.player.MakeTransparent(true);
+            PlayerManager.instance.player.fx.MakeTransparent(true);
         }
     }
 

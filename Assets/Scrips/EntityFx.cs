@@ -23,6 +23,18 @@ public class EntityFx : MonoBehaviour
         originalMat = sr.material;
     }
 
+    public void MakeTransparent(bool _transparent)
+    {
+        if (_transparent)
+        {
+            sr.color = Color.clear;
+        }
+        else
+        {
+            sr.color = Color.white;
+        }
+    }
+
     private IEnumerator FlashFx()
     {
         sr.material = hitMat;
@@ -47,7 +59,7 @@ public class EntityFx : MonoBehaviour
         }
     }
 
-    private void CancelColorChange()
+    public void CancelColorChange()
     {
         CancelInvoke();
         sr.color = Color.white;

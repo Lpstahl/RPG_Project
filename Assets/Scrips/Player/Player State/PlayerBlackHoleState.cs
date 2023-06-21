@@ -62,6 +62,6 @@ public class PlayerBlackHoleState : PlayerState
         base.Exit();
 
         player.rb.gravityScale = defaultGravity;
-        player.MakeTransparent(false);
+        player.fx.MakeTransparent(false);
     }
 }
