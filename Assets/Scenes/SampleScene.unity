@@ -1696,7 +1696,6 @@ MonoBehaviour:
   isShocked: 0
   shockStrikePrefab: {fileID: 1159879777838879102, guid: f8580bf3ff2b20444bfd3818266e0c3b, type: 3}
   currentHealth: 0
-  deadDelay: 2
 --- !u!114 &777262980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6541,7 +6540,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   damage:
-    baseValue: 10
+    baseValue: 50
     modifiers: 
   critChance:
     baseValue: 0
@@ -6562,13 +6561,13 @@ MonoBehaviour:
     baseValue: 1
     modifiers: 
   fireDamage:
-    baseValue: 50
+    baseValue: 0
     modifiers: 
   iceDamage:
     baseValue: 0
     modifiers: 
   lightingDamage:
-    baseValue: 5
+    baseValue: 20
     modifiers: 
   ailmentsDuration: 4
   isIgnite: 0
@@ -6772,7 +6771,6 @@ MonoBehaviour:
   isShocked: 0
   shockStrikePrefab: {fileID: 1159879777838879102, guid: f8580bf3ff2b20444bfd3818266e0c3b, type: 3}
   currentHealth: 0
-  deadDelay: 2
 --- !u!114 &1669060076
 MonoBehaviour:
   m_ObjectHideFlags: 0
