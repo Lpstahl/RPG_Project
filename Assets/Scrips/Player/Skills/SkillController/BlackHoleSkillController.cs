@@ -131,6 +131,8 @@ public class BlackHoleSkillController : MonoBehaviour
                 SkillManager.instance.crystal.CurrentCrystalChooseRandomTarget();
             }
 
+            
+
             else
             { 
             SkillManager.instance.clone.CreateClone(targets[randomIndex], new Vector3(xOffset, 0));

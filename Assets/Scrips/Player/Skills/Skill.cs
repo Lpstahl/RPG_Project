@@ -43,7 +43,7 @@ public class Skill : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(_checkTransform.position, 25);
 
         float closestDistance = Mathf.Infinity;
-        Transform closestEnemy = null;
+        Transform closestEnemy = null;       
 
         foreach (var hit in colliders)
         {
