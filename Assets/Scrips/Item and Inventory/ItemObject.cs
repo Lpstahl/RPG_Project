@@ -18,7 +18,7 @@ public class ItemObject : MonoBehaviour
     {
         if ( collision.GetComponent<Player>() != null)
         {
-            Inventory.Instance.AddItem(ItemData);
+            Inventory.instance.AddItem(ItemData);
             Destroy(gameObject);
         }
     }

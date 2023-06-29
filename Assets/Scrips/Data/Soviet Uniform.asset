@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48766562a8d816449f625c3c430c72e, type: 3}
   m_Name: Soviet Uniform
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 1
   itemName: Soviet Uniform
   icon: {fileID: 957708663, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   equipmantType: 1
