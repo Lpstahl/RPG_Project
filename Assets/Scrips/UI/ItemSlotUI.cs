@@ -40,7 +40,7 @@ public class ItemSlotUI : MonoBehaviour, IPointerDownHandler
         itemText.text = "";
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public virtual void OnPointerDown(PointerEventData eventData)
     {
         if (item.data.itemType == ItemType.Equipmant)
         {
