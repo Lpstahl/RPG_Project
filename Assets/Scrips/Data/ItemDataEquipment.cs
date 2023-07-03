@@ -38,6 +38,9 @@ public class ItemDataEquipment : ItemData
     public int iceDamage;
     public int lightiningDamage;
 
+    [Header("Craft requirements")]
+    public List<InventoryItem> craftMaterials;
+
     public void AddModifier()
     {
         PlayerStats playerStats = PlayerManager.instance.player.GetComponent<PlayerStats>();

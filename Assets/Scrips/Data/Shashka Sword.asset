@@ -16,3 +16,22 @@ MonoBehaviour:
   itemName: Shashka Sword
   icon: {fileID: 1724600912, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   equipmantType: 0
+  strenght: 0
+  agility: 2
+  intelligence: 0
+  vitality: 0
+  damage: 8
+  critChance: 0
+  critPower: 0
+  health: 0
+  armor: 0
+  evasion: 3
+  magicResistence: 0
+  fireDamage: 0
+  iceDamage: 0
+  lightiningDamage: 0
+  craftMaterials:
+  - data: {fileID: 11400000, guid: 91e8f1b1914b05c4eb924822e8c8ba4e, type: 2}
+    stackSize: 1
+  - data: {fileID: 11400000, guid: c7ffc1d035147e346ba7fe68695a6743, type: 2}
+    stackSize: 1
