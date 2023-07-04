@@ -15,11 +15,12 @@ MonoBehaviour:
   itemType: 1
   itemName: Soviet Uniform
   icon: {fileID: 957708663, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  dropChance: 20
   equipmantType: 1
-  strenght: 0
+  strenght: 1
   agility: 0
   intelligence: 0
-  vitality: 0
+  vitality: 2
   damage: 0
   critChance: 0
   critPower: 0
@@ -30,3 +31,4 @@ MonoBehaviour:
   fireDamage: 0
   iceDamage: 0
   lightiningDamage: 0
+  craftMaterials: []

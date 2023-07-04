@@ -6,6 +6,7 @@ public class EnemyStats : CharacterStats
 {
     private float deadDelay = 1.3f;
     private Enemy enemy;
+    private ItemDrop myDropSystem;
 
     [Header("Level details")]
     [SerializeField] private int level = 1;
@@ -20,6 +21,7 @@ public class EnemyStats : CharacterStats
         base.Start();
 
         enemy = GetComponent<Enemy>();
+        myDropSystem = GetComponent<ItemDrop>();
     }
 
     private void ApplyLevelModifiers()
@@ -63,9 +65,11 @@ public class EnemyStats : CharacterStats
         base.Die();
 
         enemy.Die();
-        enemy.fx.CancelColorChange();
+        enemy.fx.CancelColorChange();      
 
         Invoke("DestroyObject", deadDelay);
+
+        myDropSystem.GenerateDrop();
     }
 
     private void DestroyObject()

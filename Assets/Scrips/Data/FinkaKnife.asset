@@ -15,6 +15,7 @@ MonoBehaviour:
   itemType: 1
   itemName: Finka Knife
   icon: {fileID: 367297872, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  dropChance: 10
   equipmantType: 0
   strenght: 0
   agility: 0
@@ -30,3 +31,4 @@ MonoBehaviour:
   fireDamage: 0
   iceDamage: 0
   lightiningDamage: 0
+  craftMaterials: []

@@ -15,6 +15,7 @@ MonoBehaviour:
   itemType: 1
   itemName: Shashka Sword
   icon: {fileID: 1724600912, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  dropChance: 10
   equipmantType: 0
   strenght: 0
   agility: 2
