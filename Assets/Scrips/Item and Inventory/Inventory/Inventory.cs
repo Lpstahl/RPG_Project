@@ -137,7 +137,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemData _item)
     {
-        if (_item.itemType == ItemType.Equipmant)
+        if (_item.itemType == ItemType.Equipment)
         {
             AddToInventory(_item);
         }
@@ -244,4 +244,19 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> GetEquipmentList() => equipment;
 
     public List<InventoryItem> GetStashList() => stash;
+
+    public ItemDataEquipment GetEquipment(EquipmentType _type)
+    {
+        ItemDataEquipment equipedItem = null;
+
+        foreach (KeyValuePair<ItemDataEquipment, InventoryItem> item in equipmentDictionary)
+        {
+            if (item.Key.equipmantType == _type)
+            {
+                equipedItem = item.Key;
+            }
+        }
+
+        return equipedItem;
+    }
 }

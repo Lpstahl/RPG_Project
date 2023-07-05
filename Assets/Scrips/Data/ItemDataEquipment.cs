@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum EquipmantType
+public enum EquipmentType
 {
     Weapon,
     Armor,
@@ -14,7 +14,9 @@ public enum EquipmantType
 [CreateAssetMenu(fileName = "New Item Data", menuName = "data/Equipmant")]
 public class ItemDataEquipment : ItemData
 {
-    public EquipmantType equipmantType;
+    public EquipmentType equipmantType;
+
+    public ItemEffect[] itemEffects;
 
     [Header("Major stats")]
     public int strenght;
@@ -40,6 +42,14 @@ public class ItemDataEquipment : ItemData
 
     [Header("Craft requirements")]
     public List<InventoryItem> craftMaterials;
+
+    public void Effect(Transform _enemyPosition)
+    {
+        foreach (var item in itemEffects)
+        {
+            item.ExecuteEffect(_enemyPosition);
+        }
+    }
 
     public void AddModifier()
     {

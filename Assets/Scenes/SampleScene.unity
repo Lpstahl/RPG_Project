@@ -956,6 +956,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0259dc644d5bf784eb30fa2f646c5337, type: 2}
   - {fileID: 11400000, guid: 1d8dc42578571404a9fe7e06f093eae6, type: 2}
   - {fileID: 11400000, guid: 9b0e1ea09671960409b8733ecab5e7c8, type: 2}
+  - {fileID: 11400000, guid: fb19753bd00913649b8472ad509ce2f4, type: 2}
   startingEquip: []
   equipment: []
   inventory: []
@@ -2405,7 +2406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.873785, y: 1.4678344, z: -10.35749}
+  m_LocalPosition: {x: -21.873941, y: 1.4678344, z: -10.35749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9971,7 +9972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500670305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.873785, y: 1.4678344, z: -10.35749}
+  m_LocalPosition: {x: -21.873941, y: 1.4678344, z: -10.35749}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

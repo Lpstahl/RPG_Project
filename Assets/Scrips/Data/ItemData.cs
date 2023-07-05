@@ -3,7 +3,7 @@ using UnityEngine;
 public enum ItemType
 {
     Material,
-    Equipmant
+    Equipment
 }
 
 [CreateAssetMenu(fileName = "New Item Data", menuName = "data/Item")]
