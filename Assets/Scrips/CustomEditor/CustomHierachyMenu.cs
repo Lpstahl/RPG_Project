@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CustomHierachyMenu : EditorWindow
 {
-    [MenuItem("GAmeObject/Create Custom Header")]
+    [MenuItem("GameObject/Create Custom Header")]
 
     static void CreateCustomHeader(MenuCommand _menuCommand)
     {

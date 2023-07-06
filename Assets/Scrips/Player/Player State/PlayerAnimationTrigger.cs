@@ -28,8 +28,6 @@ public class PlayerAnimationTrigger : MonoBehaviour
 
                 if (weaponData != null)
                     weaponData.Effect(_target.transform);
-
-
             }
         }
     }
