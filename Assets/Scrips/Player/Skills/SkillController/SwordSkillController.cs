@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEditorInternal;
 using UnityEngine;
 
@@ -218,6 +219,13 @@ public class SwordSkillController : MonoBehaviour
     {
         player.stats.DoDamage(enemy.GetComponent<CharacterStats>());
         enemy.StartCoroutine("FreezeTimeFor", freezeTimeDuration);
+
+        ItemDataEquipment equipAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+
+        if (equipAmulet != null)
+        {
+            equipAmulet.Effect(enemy.transform);
+        }
     }
 
     private void SetupTargetForBounce(Collider2D collision)

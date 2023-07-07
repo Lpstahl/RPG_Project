@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e4a22b28cef7f4fb1970c6d79e297e, type: 3}
-  m_Name: Shock strike Effect
+  m_Script: {fileID: 11500000, guid: 673640f11eb65c5429e5851240cc105a, type: 3}
+  m_Name: Ice and Fire Effect
   m_EditorClassIdentifier: 
-  shockStrikePref: {fileID: 6648168865438946186, guid: 2e8be673bd8e2ac4bac4e1847883e65f, type: 3}
+  iceAndFireprefab: {fileID: 2107443094428770991, guid: 1f5019b4754cf9541bd76404a429603e, type: 3}
+  xVelocity: 10
