@@ -959,6 +959,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb19753bd00913649b8472ad509ce2f4, type: 2}
   - {fileID: 11400000, guid: 8b158505f89ebd74282c1a5a5441f931, type: 2}
   - {fileID: 11400000, guid: 1f4e5495b5c7b724e96c62cde826a9bd, type: 2}
+  - {fileID: 11400000, guid: 9dc02068ee4adb448b4593e486756bce, type: 2}
+  - {fileID: 11400000, guid: f7ee2a30e9c662548a17bd869890f35e, type: 2}
   startingEquip: []
   equipment: []
   inventory: []
