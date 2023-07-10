@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c48766562a8d816449f625c3c430c72e, type: 3}
-  m_Name: Sword Of Stalingrado
+  m_Name: Armor Flask
   m_EditorClassIdentifier: 
   itemType: 1
-  itemName: Sword Of Stalingrado
-  icon: {fileID: -212211228, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
-  dropChance: 6
-  equipmantType: 0
+  itemName: Armor Flask
+  icon: {fileID: 1992818346, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  dropChance: 0
+  equipmantType: 3
+  itemCooldown: 15
   itemEffects:
-  - {fileID: 11400000, guid: 7303ffc6d98815443974321b2d5c57f7, type: 2}
+  - {fileID: 11400000, guid: 26b3376a60bebb442bca12ddc5dcc1c6, type: 2}
+  - {fileID: 11400000, guid: d2b3e8d75b9c44641a71cfd7c8c42948, type: 2}
   strenght: 0
   agility: 0
   intelligence: 0
@@ -30,7 +32,7 @@ MonoBehaviour:
   armor: 0
   evasion: 0
   magicResistence: 0
-  fireDamage: 5
-  iceDamage: 5
+  fireDamage: 0
+  iceDamage: 0
   lightiningDamage: 0
   craftMaterials: []

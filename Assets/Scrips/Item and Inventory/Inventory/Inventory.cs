@@ -31,6 +31,8 @@ public class Inventory : MonoBehaviour
 
     [Header("Items cooldown")]
     private float lastTimeUsedFlask;
+    private float lastTimeUsedArmor;
+    
 
     private void Awake()
     {
@@ -281,5 +283,19 @@ public class Inventory : MonoBehaviour
         }
         else
             Debug.Log("flask on cooldown");
+    }
+
+    public bool CanUseArmor()
+    {
+        ItemDataEquipment currentArmor = GetEquipment(EquipmentType.Armor);
+
+        if (Time.time > lastTimeUsedArmor + currentArmor.itemCooldown)
+        {
+            lastTimeUsedArmor = Time.time;
+            return true;
+        }
+
+        Debug.Log("Armor in cooldown");
+        return false;
     }
 }

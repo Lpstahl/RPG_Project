@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
@@ -41,7 +42,7 @@ public class CharacterStats : MonoBehaviour
     private int igniteDamage;
     [SerializeField] private GameObject shockStrikePrefab;
     private int shockDamage;
-    public int currentHealth;  
+    public int currentHealth;
 
     public System.Action onHealthChanged;
     public bool isDead { get; private set; }
@@ -83,6 +84,19 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    public virtual void IncreaseStatBy(int _modifier, float _duratiom, Stat _statModifiy)
+    {
+        StartCoroutine(StatModCoroutine(_modifier, _duratiom, _statModifiy));
+    }
+
+    private IEnumerator  StatModCoroutine(int _modifier, float _duratiom, Stat _statModifiy)
+    {
+        _statModifiy.AddModifier(_modifier);
+
+        yield return new WaitForSeconds(_duratiom);
+
+        _statModifiy.RemoveModifier(_modifier);
+    }
 
     public virtual void DoDamage(CharacterStats _targetStats)
     {
@@ -101,7 +115,7 @@ public class CharacterStats : MonoBehaviour
         totalDamage = CheckTargetArmor(_targetStats, totalDamage);
         _targetStats.TakeDamage(totalDamage);
 
-        //DoMagicalDamage(_targetStats);
+        DoMagicalDamage(_targetStats); // remove if you don´t want to apply magic hit on primary attack
     }
 
     #region Magical damage and ailments

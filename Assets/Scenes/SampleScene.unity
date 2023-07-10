@@ -961,6 +961,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f4e5495b5c7b724e96c62cde826a9bd, type: 2}
   - {fileID: 11400000, guid: 9dc02068ee4adb448b4593e486756bce, type: 2}
   - {fileID: 11400000, guid: f7ee2a30e9c662548a17bd869890f35e, type: 2}
+  - {fileID: 11400000, guid: 9d33533ce835a674b8b7bc1fd6d5043a, type: 2}
+  - {fileID: 11400000, guid: dbeb638e27181804093bf1a98cd6f8f0, type: 2}
+  - {fileID: 11400000, guid: d4ec534fe98db924ca716a4107f707b8, type: 2}
   startingEquip: []
   equipment: []
   inventory: []
@@ -3376,7 +3379,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 500
     modifiers: 
   armor:
     baseValue: 0
@@ -3391,7 +3394,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 2
+    baseValue: 0
     modifiers: 
   lightingDamage:
     baseValue: 0
@@ -9350,7 +9353,7 @@ MonoBehaviour:
     baseValue: 10
     modifiers: 
   damage:
-    baseValue: 13
+    baseValue: 20
     modifiers: 
   critChance:
     baseValue: 99
@@ -9359,7 +9362,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 500
     modifiers: 
   armor:
     baseValue: 0
@@ -19384,7 +19387,7 @@ MonoBehaviour:
     baseValue: 10
     modifiers: 
   damage:
-    baseValue: 13
+    baseValue: 20
     modifiers: 
   critChance:
     baseValue: 99
@@ -19393,7 +19396,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 500
     modifiers: 
   armor:
     baseValue: 0
@@ -19408,7 +19411,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   iceDamage:
-    baseValue: 2
+    baseValue: 0
     modifiers: 
   lightingDamage:
     baseValue: 0
